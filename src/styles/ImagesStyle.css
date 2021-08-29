@@ -1,0 +1,36 @@
+.image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.image img {
+  height: 400px;
+  width: 400px;
+}
+.imgDiv {
+  height: 400px;
+  width: 400px !important;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgDiv::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.image span:first-of-type {
+  position: absolute;
+  content: "";
+  top: 3px;
+  right: 3px;
+  background: black;
+  padding: 0.2rem 0.6rem;
+  color: white;
+  z-index: 1 !important;
+  cursor: pointer;
+}
